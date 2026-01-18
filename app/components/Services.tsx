@@ -227,7 +227,7 @@ export default function Services() {
             <div className="flex flex-col lg:flex-row items-start gap-8">
               {/* Left Column - Service Info */}
               <div className="lg:w-2/3">
-                <div className="flex items-center gap-4 mb-6">
+                <div className="flex items-center gap-4 mb-6 flex-col md:flex-row">
                   <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${selectedService.color} flex items-center justify-center`}>
                     <selectedService.icon className="w-8 h-8 text-white" />
                   </div>
@@ -256,11 +256,10 @@ export default function Services() {
               {/* Right Column - CTA */}
               <div className="lg:w-1/3">
                 <div className="bg-gradient-to-b from-surepath-blue to-surepath-light-blue rounded-xl p-6 text-white">
-                  <h4 className="text-xl font-bold mb-4">Start Your Journey</h4>
-                  <p className="text-white/90 mb-6">
+                  <h4 className="text-xl font-bold mb-4 text-black">Start Your Journey</h4>
+                  <p className="text-gray-600 mb-4">
                     Get started with {selectedService.title.toLowerCase()} today.
                   </p>
-                  
                   <div className="space-y-4">
                     <button className="w-full bg-black text-surepath-blue font-bold py-3 rounded-lg hover:bg-gray-200 hover:text-black transition-colors">
                       Get Started
@@ -268,7 +267,7 @@ export default function Services() {
                   </div>
                   
                   <div className="mt-6 pt-6 border-t border-white/20">
-                    <div className="flex items-center gap-2 text-sm">
+                    <div className="flex items-center gap-2 text-sm text-gray-500">
                       <FaHandsHelping className="w-4 h-4" />
                       <span>Personalized support from our experts</span>
                     </div>
@@ -277,39 +276,6 @@ export default function Services() {
               </div>
             </div>
           </div>
-        </div>
-
-        {/* Process Timeline */}
-        <div className="bg-gradient-to-r from-surepath-light-blue/20 to-surepath-accent/20 rounded-2xl p-8">
-          <h3 className="text-2xl font-bold text-surepath-dark-blue text-center mb-8">
-            Our 4-Step Process
-          </h3>
-          <div className="grid md:grid-cols-4 gap-8">
-            {[
-              { step: '1', title: 'Consultation', desc: 'Free initial assessment of your goals' },
-              { step: '2', title: 'Planning', desc: 'Personalized roadmap creation' },
-              { step: '3', title: 'Execution', desc: 'Documentation & application support' },
-              { step: '4', title: 'Support', desc: 'Ongoing assistance until success' },
-            ].map((item) => (
-              <div key={item.step} className="text-center">
-                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-surepath-blue to-surepath-light-blue text-white flex items-center justify-center text-2xl font-bold mx-auto mb-4">
-                  {item.step}
-                </div>
-                <h4 className="font-bold text-gray-900 mb-2">{item.title}</h4>
-                <p className="text-sm text-gray-600">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Final CTA */}
-        <div className="text-center mt-16">
-          <button className="bg-gradient-to-r from-surepath-blue to-surepath-light-blue text-white px-10 py-4 rounded-xl font-bold text-lg hover:shadow-2xl hover:shadow-surepath-blue/30 transition-all">
-            Get Free Consultation Now
-          </button>
-          <p className="text-gray-500 mt-4">
-            Speak with our experts about your study abroad plans
-          </p>
         </div>
       </div>
     </section>
