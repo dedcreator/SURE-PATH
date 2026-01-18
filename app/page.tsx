@@ -1,6 +1,5 @@
 import Header from './components/Header'
 import Hero from './components/Hero'
-import Programs from './components/Programs'
 import Testimonials from './components/Testimonials'
 import Services from './components/Services'
 import Destinations from './components/Destinations'
@@ -13,8 +12,9 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
+        <Services />
       </main>
-  
+      <Footer />
     </>
   )
 }
